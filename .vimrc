@@ -10,7 +10,7 @@ color desert
 set clipboard=unnamed
 set number
 "Change tabs to 4 spaces
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set showcmd
 
 set copyindent
