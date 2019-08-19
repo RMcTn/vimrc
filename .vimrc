@@ -55,6 +55,8 @@ call vundle#begin()
 ":PluginInstall
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'rust-lang/rust.vim'
+
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree'
@@ -80,5 +82,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:tern_show_argument_hints='on_hold'
 " and 
 let g:tern_map_keys=1
+
+let g:rustfmt_autosave = 1
 
 
