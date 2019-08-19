@@ -73,6 +73,8 @@ filetype plugin indent on
 "open nerd tree
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :NERDTreeTabsToggle<CR>
+
+map <F2> :Cargo build<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "apply FixIt fix
 map <F9> :YcmCompleter FixIt<CR>
