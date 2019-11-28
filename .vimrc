@@ -74,6 +74,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'vimwiki/vimwiki'
 Plugin 'majutsushi/tagbar'
 
+Plugin 'tpope/vim-surround'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -117,3 +118,6 @@ set background=dark
 nmap <F6> :TODOToggle<CR>
 
 :nnoremap Q :q<CR>
+
+set splitbelow
+set splitright
