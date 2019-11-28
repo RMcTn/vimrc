@@ -64,6 +64,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vimwiki/vimwiki'
 Plugin 'majutsushi/tagbar'
