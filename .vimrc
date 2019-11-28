@@ -14,7 +14,7 @@ syntax on
 
 set relativenumber
 
-color desert
+"color desert
 
 set clipboard=unnamed
 set number
@@ -55,36 +55,55 @@ call vundle#begin()
 ":PluginInstall
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'fholgado/minibufexpl.vim'
+
 Plugin 'rust-lang/rust.vim'
+
+Plugin 'morhetz/gruvbox'
 
 Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vimwiki/vimwiki'
-Plugin 'ternjs/tern_for_vim'
+Plugin 'majutsushi/tagbar'
+
+
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tomtom/tcomment_vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
 
-"open nerd tree
+"NERDTree
+let g:NERDTreeWinPos = 'right'
+map <F4> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTreeTabsToggle<CR>
 
-map <F2> :Cargo build<CR>
+"YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "apply FixIt fix
 map <F9> :YcmCompleter FixIt<CR>
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion=1
 
-let g:tern_show_argument_hints='on_hold'
-" and 
-let g:tern_map_keys=1
-
+"Rust
+map <F8> :!cargo build<CR>
 let g:rustfmt_autosave = 1
 
+"Tagbar
+let g:tagbar_left = 1
+nmap <F3> :TagbarToggle<CR>
+nmap <F2> :TagbarOpen fcj<CR>
 
+"MiniBufferExplorer
+nmap <F5> :MBEToggle<CR>:MBEFocus<CR>
+color gruvbox
+set background=dark
+
+nmap X :bd<CR>
