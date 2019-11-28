@@ -55,7 +55,7 @@ call vundle#begin()
 ":PluginInstall
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'fholgado/minibufexpl.vim'
+Plugin 'Dimercel/todo-vim'
 
 Plugin 'rust-lang/rust.vim'
 
@@ -103,9 +103,10 @@ let g:tagbar_left = 1
 nmap <F3> :TagbarToggle<CR>
 nmap <F2> :TagbarOpen fcj<CR>
 
-"MiniBufferExplorer
-nmap <F5> :MBEToggle<CR>:MBEFocus<CR>
 color gruvbox
 set background=dark
 
-nmap X :bd<CR>
+"Todo-vim
+nmap <F6> :TODOToggle<CR>
+
+:nnoremap Q :q<CR>
