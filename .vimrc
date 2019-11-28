@@ -87,6 +87,9 @@ let g:NERDTreeWinPos = 'right'
 map <F4> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 
+"FZF
+map <C-m> :Files<CR>
+
 "YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "apply FixIt fix
