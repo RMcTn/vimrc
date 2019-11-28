@@ -57,9 +57,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Dimercel/todo-vim'
 
+Plugin 'ludovicchabant/vim-gutentags'
+
 Plugin 'rust-lang/rust.vim'
 
 Plugin 'morhetz/gruvbox'
+
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'Valloric/YouCompleteMe'
 
