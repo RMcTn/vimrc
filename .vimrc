@@ -40,9 +40,6 @@ cnoremap w!! w !sudo tee % >/dev/null
 "Remove search highlights
 noremap <silent> <leader><cr> :noh<cr>
 
-"tabs are width of 2 in ruby files
-autocmd FileType rb setlocal shiftwidth=2 tabstop = 2
-
 "remap ii to exit modes
 imap ii <Esc>
 imap jk <Esc>
@@ -62,6 +59,11 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
+":CocInstall coc-json coc-tsserver
+
+Plugin 'rust-lang/rust.vim'
+
+"Plugin 'dense-analysis/ale'
 
 Plugin 'morhetz/gruvbox'
 
@@ -97,6 +99,7 @@ map <C-m> :Files<CR>
 
 "Rust
 map <F8> :!cargo build<CR>
+map <F7> :!cargo test<CR>
 let g:rustfmt_autosave = 1
 
 "Tagbar
