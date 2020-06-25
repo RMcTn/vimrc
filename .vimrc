@@ -59,13 +59,13 @@ Plugin 'Dimercel/todo-vim'
 
 Plugin 'ludovicchabant/vim-gutentags'
 
-Plugin 'rust-lang/rust.vim'
+Plugin 'neoclide/coc.nvim'
+"coc plugin extension install
+":CocInstall coc-rust-analyzer
 
 Plugin 'morhetz/gruvbox'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
-
-Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
@@ -95,19 +95,13 @@ map <C-n> :NERDTreeToggle<CR>
 "FZF
 map <C-m> :Files<CR>
 
-"YCM
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"apply FixIt fix
-map <F9> :YcmCompleter FixIt<CR>
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion=1
-
 "Rust
 map <F8> :!cargo build<CR>
 let g:rustfmt_autosave = 1
 
 "Tagbar
 let g:tagbar_left = 1
+let g:gutentags_enabled = 0
 nmap <F3> :TagbarToggle<CR>
 nmap <F2> :TagbarOpen fcj<CR>
 
