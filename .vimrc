@@ -74,8 +74,11 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+
 Plugin 'Raimondi/delimitMate'
 Plugin 'tomtom/tcomment_vim'
 
@@ -94,6 +97,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-m> :Files<CR>
 
 "Rust
+map <F9> :!cargo run<CR>
 map <F8> :!cargo build<CR>
 map <F7> :!cargo test<CR>
 let g:rustfmt_autosave = 1
