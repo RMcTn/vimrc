@@ -63,8 +63,6 @@ Plugin 'neoclide/coc.nvim'
 
 Plugin 'rust-lang/rust.vim'
 
-"Plugin 'dense-analysis/ale'
-
 Plugin 'morhetz/gruvbox'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -73,11 +71,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 
 Plugin 'vim-scripts/ZoomWin'
-Plugin 'vimwiki/vimwiki'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'tpope/vim-surround'
-
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Raimondi/delimitMate'
@@ -162,6 +158,16 @@ else
 endif
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+" Completion
+" Better display for messages
+set cmdheight=2
+set signcolumn=yes
+
+"Mapping for save file
+"map <leader>w :w<CR>
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
 
 set splitbelow
 set splitright
