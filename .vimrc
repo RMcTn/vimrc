@@ -59,7 +59,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
-":CocInstall coc-json coc-tsserver
+":CocInstall coc-json coc-tsserver coc-html coc-css
 
 Plugin 'rust-lang/rust.vim'
 
@@ -95,6 +95,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 "FZF
 map <C-m> :Files<CR>
+let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-z': 'split' }
 
 "Rust
 map <F9> :!cargo run<CR>
