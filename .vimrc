@@ -56,6 +56,8 @@ Plugin 'Dimercel/todo-vim'
 
 Plugin 'ludovicchabant/vim-gutentags'
 
+Plugin 'machakann/vim-highlightedyank'
+
 Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
