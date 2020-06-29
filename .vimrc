@@ -93,6 +93,7 @@ let g:NERDTreeWinPos = 'right'
 map <F4> :NERDTreeToggle<CR>
 
 "FZF
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 map <C-m> :Files<CR>
 map <C-n> :Rg<CR>
 let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-z': 'split' }
