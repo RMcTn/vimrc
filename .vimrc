@@ -91,10 +91,10 @@ filetype plugin indent on
 "NERDTree
 let g:NERDTreeWinPos = 'right'
 map <F4> :NERDTreeToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
 
 "FZF
 map <C-m> :Files<CR>
+map <C-n> :Rg<CR>
 let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-z': 'split' }
 
 "Rust
@@ -163,6 +163,7 @@ else
 endif
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
 " Completion
 " Better display for messages
 set cmdheight=2
@@ -173,6 +174,17 @@ set signcolumn=yes
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
+
+" Use `leader[` and `leader]` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location
+"list.
+nmap <leader>[ <Plug>(coc-diagnostic-prev)
+nmap <leader>] <Plug>(coc-diagnostic-next)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 set splitbelow
 set splitright
