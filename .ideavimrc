@@ -1,0 +1,93 @@
+" Relative gutter numbers
+set relativenumber
+set number
+set surround
+
+
+" https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md
+set hlsearch
+set incsearch
+set showmatch
+set ignorecase
+set smartcase
+
+" 3 lines above/below cursor when scrolling
+set scrolloff=3
+
+" Integrate with system clipboard
+set clipboard=unnamed
+
+" Set global for default when replacing
+set gdefault
+
+" Set leader key to space
+let mapleader = " "
+set multiple-cursors
+
+nmap <leader>m :action ImplementMethods<cr>
+nmap <leader>I :action GotoSuperMethod<cr>
+
+nmap <leader>h :action TypeHierarchy<cr>
+nmap <leader>s :action GotoSymbol<cr>
+nmap <leader>t :action GotoAction<cr>
+nmap <leader>d :action FileStructurePopup<cr>
+nmap <leader>q :action QuickJavaDoc<cr>
+nmap <leader>e :action ShowErrorDescription<cr>
+nmap <leader>w <c-w>
+nmap <leader>a :action GotoRelated<cr>
+nmap <leader>x :action CloseContent<cr>
+nmap <leader>X :action ReopenClosedTab<cr>
+nmap <leader>b :action ToggleLineBreakpoint<cr>
+nmap <leader>k :action HighlightUsagesInFile<cr>
+
+nmap \R :action RunClass<cr>
+nmap \r :action Run<cr>
+map \D :action DebugClass<cr>
+nmap \d :action Debug<cr>
+
+" IdeaVim uses 'a' for alt instead of Vim's 'm'
+nmap <a-u> :action MoveLineUp<cr>
+nmap <a-d> :action MoveLineDown<cr>
+nmap <a-k> [m
+nmap <a-j> ]m
+
+" Move top tabs with alt
+nmap <a-h> gT
+nmap <a-l> gt
+
+" Create newlines like o and O but stay in normal mode
+"nmap <c-k> mmO<Esc>`m
+"nmap <c-j> mmo<Esc>`m
+
+imap <c-s>  <Esc>:action OptimizeImports<cr> :action SaveAll<cr> :action ReformatCode<cr>a
+nmap <c-s>  :action OptimizeImports<cr> :action SaveAll<cr> :action ReformatCode<cr>
+imap <c-l> <c-o>l
+imap <c-h> <c-o>h
+imap <c-e> <c-w>
+
+vmap <C-p> y'>p
+
+imap <C-4> <Esc>:action EditorCompleteStatement<cr>i
+nmap <C-4> :action EditorCompleteStatement<cr>
+
+" nmap zk O<Esc>j
+" nmap zj :action EditorStartNewLine<cr>
+
+
+" Reece
+imap ii <Esc>
+noremap ii <Esc>
+imap jk <Esc>
+noremap jk <Esc>
+nmap gr :action FindUsages<cr>
+nmap gi :action GotoImplementation<cr>
+nmap K :action QuickJavaDoc<cr>
+nmap <C-j> :action GotoNextError<cr>
+nmap <C-k> :action GotoPreviousError<cr>
+nmap <leader>rn :action RenameElement<cr>
+nmap <cr> :action GotoFile<cr>
+nnoremap Q :q<CR>
+noremap <silent> <leader><cr> :noh<cr>
+nmap <leader><leader> :action RecentLocations<cr>
+" <c-,> to hide active tool windows
+" <c-'> restore default layout (useful for getting rid of documentation window)
