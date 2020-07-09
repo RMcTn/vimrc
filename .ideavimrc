@@ -78,7 +78,6 @@ nmap <C-4> :action EditorCompleteStatement<cr>
 imap ii <Esc>
 noremap ii <Esc>
 imap jk <Esc>
-noremap jk <Esc>
 nmap gr :action FindUsages<cr>
 nmap gi :action GotoImplementation<cr>
 nmap K :action QuickJavaDoc<cr>
