@@ -5,7 +5,6 @@ nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
-
 " Make j and k move to the next row, not file line
 nnoremap j gj
 nnoremap k gk
@@ -57,6 +56,9 @@ Plugin 'Dimercel/todo-vim'
 Plugin 'ludovicchabant/vim-gutentags'
 
 Plugin 'machakann/vim-highlightedyank'
+
+Plugin 'vimwiki/vimwiki'
+"<leader>ww to open or <leader>wt for new tab
 
 Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
@@ -181,8 +183,8 @@ imap <c-s> <Esc><c-s>
 " Use `leader[` and `leader]` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location
 "list.
-nmap <leader>[ <Plug>(coc-diagnostic-prev)
-nmap <leader>] <Plug>(coc-diagnostic-next)
+nmap <c-k> <Plug>(coc-diagnostic-prev)
+nmap <c-j> <Plug>(coc-diagnostic-next)
 
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
