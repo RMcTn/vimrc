@@ -65,6 +65,8 @@ Plugin 'neoclide/coc.nvim'
 ":CocInstall coc-rust-analyzer
 ":CocInstall coc-json coc-tsserver coc-html coc-css
 
+Plugin 'leafOfTree/vim-svelte-plugin'
+
 Plugin 'rust-lang/rust.vim'
 
 Plugin 'morhetz/gruvbox'
