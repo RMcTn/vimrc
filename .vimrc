@@ -105,7 +105,10 @@ map <F4> :NERDTreeToggle<CR>
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 map <C-m> :Files<CR>
 map <C-n> :Rg<CR>
+map <C-l> :Buffer<CR>
 let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-z': 'split' }
+
+map <leader><leader> :b#<CR>
 
 "Rust
 map <F9> :!cargo run<CR>
