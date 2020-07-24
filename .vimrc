@@ -13,6 +13,9 @@ syntax on
 
 set relativenumber
 
+set undodir=~/.vimdid
+set undofile
+
 "color desert
 
 set clipboard=unnamed
