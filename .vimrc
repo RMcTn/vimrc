@@ -67,6 +67,11 @@ Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
 ":CocInstall coc-json coc-tsserver coc-html coc-css
+":CocInstall coc-solargraph
+
+"Ruby
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 
 Plugin 'leafOfTree/vim-svelte-plugin'
 
