@@ -72,6 +72,9 @@ Plugin 'neoclide/coc.nvim'
 "Ruby
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
+Plugin 'vim-ruby/vim-ruby'
+
+Plugin 'tpope/vim-commentary'
 
 Plugin 'leafOfTree/vim-svelte-plugin'
 
@@ -88,6 +91,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/fzf'
