@@ -68,6 +68,8 @@ Plugin 'neoclide/coc.nvim'
 ":CocInstall coc-rust-analyzer
 ":CocInstall coc-json coc-tsserver coc-html coc-css
 ":CocInstall coc-solargraph
+":CocInstall coc-clangd
+":CocCommand clangd.install
 
 "Ruby
 Plugin 'tpope/vim-rails'
@@ -214,3 +216,15 @@ set diffopt+=vertical
 
 set splitbelow
 set splitright
+
+"For Python 3 plugins:
+"1. Make sure Python 3.4+ is available in your $PATH.
+"2. Install the module (try "python" if "python3" is missing): >
+"   python3 -m pip install --user --upgrade pynvim
+
+"Clangd-format on save (NEEDS PYTHON, SEE ABOVE)
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f /usr/share/clang/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
