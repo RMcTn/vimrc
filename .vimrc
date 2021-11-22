@@ -1,10 +1,10 @@
+" Needed for nvim (nvim path .config/nvim/init.vim )
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+
 set nocompatible
 set path+=**
 
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
 " Make j and k move to the next row, not file line
 nnoremap j gj
 nnoremap k gk
@@ -69,12 +69,16 @@ Plugin 'neoclide/coc.nvim'
 ":CocInstall coc-json coc-tsserver coc-html coc-css
 ":CocInstall coc-solargraph
 ":CocInstall coc-clangd
+":CocInstall coc-go
 ":CocCommand clangd.install
 
 "Ruby
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'vim-ruby/vim-ruby'
+
+"Go
+Plugin 'tweekmonster/gofmt.vim'
 
 Plugin 'tpope/vim-commentary'
 
@@ -104,6 +108,7 @@ Plugin 'tomtom/tcomment_vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -228,3 +233,7 @@ function! Formatonsave()
   py3f /usr/share/clang/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+"Go
+"autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
