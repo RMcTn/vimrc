@@ -228,6 +228,7 @@ set splitright
 "   python3 -m pip install --user --upgrade pynvim
 
 "Clangd-format on save (NEEDS PYTHON, SEE ABOVE)
+"FOR MAC: brew install clang-format
 function! Formatonsave()
   let l:formatdiff = 1
   py3f /usr/share/clang/clang-format.py
