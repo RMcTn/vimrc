@@ -229,9 +229,11 @@ set splitright
 
 "Clangd-format on save (NEEDS PYTHON, SEE ABOVE)
 "FOR MAC: brew install clang-format
+"FOR MAC: brew install llvm
 function! Formatonsave()
   let l:formatdiff = 1
   py3f /usr/share/clang/clang-format.py
+  "FOR MAC: py3f /opt/homebrew/Cellar/llvm/13.0.1_1/share/clang/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
