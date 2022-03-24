@@ -91,3 +91,7 @@ noremap <silent> <leader><cr> :noh<cr>
 nmap <leader><leader> :action RecentLocations<cr>
 " <c-,> to hide active tool windows
 " <c-'> restore default layout (useful for getting rid of documentation window)
+
+" Better back/forward navigation
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
