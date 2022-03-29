@@ -81,6 +81,7 @@ imap jk <Esc>
 nmap gr :action FindUsages<cr>
 nmap gi :action GotoImplementation<cr>
 nmap gd :action GotoDeclaration<cr>
+nmap gt :action GotoTest<cr>
 nmap K :action QuickJavaDoc<cr>
 nmap <C-j> :action GotoNextError<cr>
 nmap <C-k> :action GotoPreviousError<cr>
