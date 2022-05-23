@@ -94,5 +94,6 @@ nmap <leader><leader> :action RecentLocations<cr>
 " <c-'> restore default layout (useful for getting rid of documentation window)
 
 " Better back/forward navigation
-nmap <C-o> :action Back<CR>
-nmap <C-i> :action Forward<CR>
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
