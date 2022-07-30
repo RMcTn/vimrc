@@ -1,0 +1,9 @@
+[user]
+	name = Reece McTiernan
+	email = rmctiernan@pm.me
+[alias]
+	lg = log --oneline
+[commit]
+	verbose = true
+[core]
+	editor = nvim
