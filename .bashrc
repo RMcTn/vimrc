@@ -24,3 +24,4 @@ alias gsearch="git log -S" # <term> Will search for something in the diff of com
 }
 # No idea why, but this command just doesn't work when done from the zshrc file. Way more output that in you just run it yourself in the shell
 alias gdbranch="git log --no-merges origin/<YOUR-BRANCH>  --not $(git for-each-ref --format='%(refname)' refs/remotes/origin | grep -Fv refs/remotes/origin/<YOUR-BRANCH>)"
+alias linediff="git diff --stat"
