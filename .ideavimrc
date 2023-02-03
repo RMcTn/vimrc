@@ -97,3 +97,7 @@ nmap <leader><leader> :action RecentLocations<cr>
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
+" For mac: Remap the mac keys for # and * to something less painful to use
+" nnoremap \ *''
+" nnoremap | #''
+
