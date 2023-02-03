@@ -12,6 +12,7 @@ alias gd="git diff"
 alias gl="git log --oneline"
 alias glmaster="git log master..HEAD"
 alias gdmaster="git diff master...HEAD"
+alias gsearch="git log -S" # <term> Will search for something in the diff of commits
 # This is zsh function. Should really just make this file .zshrc at this point
 #function gdbranchtemp() {
 	if [ "$1" != ""]
