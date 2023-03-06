@@ -90,6 +90,7 @@ nmap <cr> :action GotoFile<cr>
 nnoremap Q :q<CR>
 noremap <silent> <leader><cr> :noh<cr>
 nmap <leader><leader> :action RecentLocations<cr>
+nmap <leader>rr :action Run<cr>
 " <c-,> to hide active tool windows
 " <c-'> restore default layout (useful for getting rid of documentation window)
 
