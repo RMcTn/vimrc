@@ -20,6 +20,9 @@ else
 fi
 
 
+
+# Brew installs
+echo "Installing Brew programs"
 brew install --cask alfred
 brew install --cask alt-tab
 brew install --cask docker
@@ -33,10 +36,31 @@ brew install --cask rectangle
 brew install --cask spotify
 brew install --cask slack
 brew install --cask visual-studio-code
-brew install --cask neovim
 
 brew install htop
 brew install fzf
 brew install nvm
 brew install rbenv
 brew install tmux
+brew install neovim
+
+# Cargo installs
+echo "Installing Cargo programs"
+cargo install ripgrep
+cargo install exa
+
+# Node
+echo "Installing node"
+nvm install node
+
+# Vundle
+VUNDLE_DIRECTORY = $HOME/.vim/bundle/Vundle.vim
+if [ -d "$VUNDLE_DIRECTORY" ]; then
+  echo "$VUNDLE_DIRECTORY does exist. Installing Vundle"
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  cd .vim/bundle/coc.nvim
+  npm install
+else
+	echo $VUNDLE_DIRECTORY exists. Assuming Vundle already installed"
+fi
+
