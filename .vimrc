@@ -2,6 +2,7 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
+let mapleader=" "
 set nocompatible
 set path+=**
 
@@ -122,14 +123,16 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 map <C-m> :Files<CR>
 map <C-n> :Rg<CR>
 map <C-l> :Buffer<CR>
-let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-z': 'split' }
+let g:fzf_action = { 'ctrl-x': 'vsplit', 'ctrl-c': 'split' }
 
 map <leader><leader> :b#<CR>
 
 "Rust
 map <F9> :!cargo run<CR>
+map <leader>p :!cargo run<CR>
 map <F8> :!cargo build<CR>
 map <F7> :!cargo test<CR>
+map <silent> gp :!cargo run<CR>
 let g:rustfmt_autosave = 1
 
 "Tagbar
@@ -145,6 +148,9 @@ set background=dark
 nmap <F6> :TODOToggle<CR>
 
 :nnoremap Q :q<CR>
+
+" Fixes coc solargraph ECONNREFUSED 
+let g:coc_node_args = ['--dns-result-order=ipv4first']
 
 "nvim coc config
 "From https://github.com/neoclide/coc.nvim#example-vim-configuration
