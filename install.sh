@@ -1,5 +1,9 @@
 # TODO(reece): Platform specific switches
 
+
+echo "Sourcing .zshrc"
+source $HOME/.zshrc
+
 # TODO(reece): These program install checks are going to get repetitive, factor out
 # Brew
 if ! command -v brew &> /dev/null
@@ -54,13 +58,13 @@ echo "Installing node"
 nvm install node
 
 # Vundle
-VUNDLE_DIRECTORY = $HOME/.vim/bundle/Vundle.vim
+VUNDLE_DIRECTORY=$HOME/.vim/bundle/Vundle.vim
 if [ -d "$VUNDLE_DIRECTORY" ]; then
-  echo "$VUNDLE_DIRECTORY does exist. Installing Vundle"
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  cd .vim/bundle/coc.nvim
-  npm install
+	echo "$VUNDLE_DIRECTORY exists. Assuming Vundle already installed"
 else
-	echo $VUNDLE_DIRECTORY exists. Assuming Vundle already installed"
+	echo "$VUNDLE_DIRECTORY does not exist. Installing Vundle"
+	git clone https://github.com/VundleVim/Vundle.vim.git $VUNDLE_DIRECTORY
+	cd $VUNDLE_DIRECTORY
+	npm install
 fi
 
