@@ -24,6 +24,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gd="git diff"
 alias gl="git log --oneline"
+alias gcc="git checkout"
 alias glmaster="git log master..HEAD"
 alias gdmaster="git diff master...HEAD"
 alias gsearch="git log -S" # <term> Will search for something in the diff of commits
