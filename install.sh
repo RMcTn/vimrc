@@ -68,3 +68,4 @@ else
 	npm install
 fi
 
+echo "Run $(brew --prefix)/opt/fzf/install for fzf shell autocompleting"
