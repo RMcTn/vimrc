@@ -224,7 +224,7 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 "Vim fugitive
 "Vertical diff splits
 set diffopt+=vertical
-
+nmap <leader>gs  :Git<CR>
 set splitbelow
 set splitright
 
@@ -245,4 +245,3 @@ autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
 "Go
 "autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
-
