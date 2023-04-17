@@ -10,6 +10,10 @@ set path+=**
 nnoremap j gj
 nnoremap k gk
 
+" Centre the screen after jumping half page
+nnoremap <C-d> <C-d>zz 
+nnoremap <C-u> <C-u>zz 
+
 syntax on
 
 set relativenumber
