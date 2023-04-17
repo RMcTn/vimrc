@@ -14,6 +14,14 @@ nnoremap k gk
 nnoremap <C-d> <C-d>zz 
 nnoremap <C-u> <C-u>zz 
 
+" Centre screen after jumping to search result
+" Need the 'zv' at the end to:
+"	1. Open folds (not that they get used)
+"	2. N wouldn't go backwards when searching forwards, and vice versa. No
+"	   idea why it is fixed by this
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 syntax on
 
 set relativenumber
