@@ -22,6 +22,12 @@ nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+nnoremap gf :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <leader>f :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap mf :lua require("harpoon.mark").add_file()<CR>
+" :lua require("harpoon.ui").nav_next()                   -- navigates to next mark
+" :lua require("harpoon.ui").nav_prev()                   -- navigates to previous mark
+
 syntax on
 
 set relativenumber
@@ -122,6 +128,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'ThePrimeagen/harpoon'
 
 call vundle#end()
 filetype plugin indent on
