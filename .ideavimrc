@@ -11,6 +11,10 @@ set showmatch
 set ignorecase
 set smartcase
 
+" Centre the screen after jumping half page
+nnoremap <C-d> <C-d>zz 
+nnoremap <C-u> <C-u>zz 
+
 " 3 lines above/below cursor when scrolling
 set scrolloff=3
 
@@ -101,4 +105,5 @@ nmap <C-i> <Action>(Forward)
 " For mac: Remap the mac keys for # and * to something less painful to use
 " nnoremap \ *''
 " nnoremap | #''
+
 
