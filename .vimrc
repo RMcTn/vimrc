@@ -13,6 +13,8 @@ nnoremap k gk
 " Centre the screen after jumping half page
 nnoremap <C-d> <C-d>zz 
 nnoremap <C-u> <C-u>zz 
+nnoremap <C-o> <C-o>zz 
+nnoremap <C-i> <C-i>zz 
 
 " Centre screen after jumping to search result Need the 'zv' at the end to:
 "	1. Open folds (not that they get used)

@@ -18,6 +18,8 @@ export GOPATH=$(go env GOPATH)
 export PATH="$HOME/.rbenv/shims/:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/scripts/:$PATH"
+# Add brew's path for installing libs
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 alias gs="git status"
 alias ga="git add"
