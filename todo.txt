@@ -1,0 +1,2 @@
+Fix LSP selection window not updating to selection
+Select the suggestion on autocomplete with TAB, but continue to cycle through the list
