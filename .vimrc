@@ -14,8 +14,7 @@ nnoremap k gk
 nnoremap <C-d> <C-d>zz 
 nnoremap <C-u> <C-u>zz 
 
-" Centre screen after jumping to search result
-" Need the 'zv' at the end to:
+" Centre screen after jumping to search result Need the 'zv' at the end to:
 "	1. Open folds (not that they get used)
 "	2. N wouldn't go backwards when searching forwards, and vice versa. No
 "	   idea why it is fixed by this
@@ -82,7 +81,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'vimwiki/vimwiki'
 "<leader>ww to open or <leader>wt for new tab
 
-Plugin 'neoclide/coc.nvim'
+" Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
 ":CocInstall coc-json coc-tsserver coc-html coc-css
@@ -131,6 +130,29 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'ThePrimeagen/harpoon'
 
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+
+" LSP
+  " LSP Support
+  " Required
+  Plugin 'neovim/nvim-lspconfig'                           
+  " Optional
+  Plugin 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
+  " Optional
+  Plugin 'williamboman/mason-lspconfig.nvim'               
+
+  " Autocompletion
+  " Required
+  Plugin 'hrsh7th/nvim-cmp'         
+  " Required
+  Plugin 'hrsh7th/cmp-nvim-lsp'     
+  " Required
+  Plugin 'L3MON4D3/LuaSnip'         
+
+  Plugin 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+
+" End of LSP
+
 call vundle#end()
 filetype plugin indent on
 
@@ -170,54 +192,72 @@ nmap <F6> :TODOToggle<CR>
 :nnoremap Q :q<CR>
 
 " Fixes coc solargraph ECONNREFUSED 
-let g:coc_node_args = ['--dns-result-order=ipv4first']
+" =========== COC Config (Deprecated - using LSP now) ===========
+" let g:coc_node_args = ['--dns-result-order=ipv4first']
+" 
+" "nvim coc config
+" "From https://github.com/neoclide/coc.nvim#example-vim-configuration
+"  "Use tab for trigger completion with characters ahead and navigate.
+"  "NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+"  "other plugin before putting this into your config.
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+" 
+" " Use <c-space> to trigger completion.
+" inoremap <silent><expr> <c-space> coc#refresh()
+" 
+" " GoTo code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+" 
+" " Use K to show documentation in preview window.
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
+" 
+" function! s:show_documentation()
+"   if (index(['vim','help'], &filetype) >= 0)
+"     execute 'h '.expand('<cword>')
+"   else
+"     call CocAction('doHover')
+"   endif
+" endfunction
+" 
+" " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" " position. Coc only does snippet and additional edit on confirm.
+" " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+" if exists('*complete_info')
+"   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" else
+"   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" endif
+" " Symbol renaming.
+" nmap <leader>rn <Plug>(coc-rename)
+"
+" Use `leader[` and `leader]` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location
+"list.
+" nmap <c-k> <Plug>(coc-diagnostic-prev)
+" nmap <c-j> <Plug>(coc-diagnostic-next)
 
-"nvim coc config
-"From https://github.com/neoclide/coc.nvim#example-vim-configuration
- "Use tab for trigger completion with characters ahead and navigate.
- "NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
- "other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Remap keys for applying codeAction to the current buffer.
+" nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+" nmap <leader>qf  <Plug>(coc-fix-current)
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+"Go
+"autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+" 
+" =========== END OF COC Config (Deprecated - using LSP now) ===========
 
 " Completion
 " Better display for messages
@@ -229,17 +269,6 @@ set signcolumn=yes
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
-
-" Use `leader[` and `leader]` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location
-"list.
-nmap <c-k> <Plug>(coc-diagnostic-prev)
-nmap <c-j> <Plug>(coc-diagnostic-next)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
 
 "Vim fugitive
 "Vertical diff splits
@@ -262,6 +291,3 @@ function! Formatonsave()
   "FOR MAC: py3f /opt/homebrew/Cellar/llvm/13.0.1_1/share/clang/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
-
-"Go
-"autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
