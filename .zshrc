@@ -26,7 +26,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gd="git diff"
 alias gl="git log --oneline"
-alias gcc="git checkout"
+alias gccc="git checkout"
 alias glmaster="git log master..HEAD"
 alias gdmaster="git diff master...HEAD"
 alias gsearch="git log -S" # <term> Will search for something in the diff of commits
@@ -44,3 +44,4 @@ alias gsearch="git log -S" # <term> Will search for something in the diff of com
 alias linediff="git diff --stat"
 
 export HOMEBREW_NO_GOOGLE_ANALYTICS=true # Disable brew.sh tracking
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
