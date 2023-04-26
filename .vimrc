@@ -128,7 +128,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'nvim-lua/plenary.nvim'
-Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+" Prefer fzf, but keeping it around just incase
+" Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plugin 'ThePrimeagen/harpoon'
 
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
@@ -153,6 +154,7 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plugin 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
 
 " End of LSP
+Plugin 'ibhagwan/fzf-lua', {'branch': 'main'}
 call vundle#end()
 filetype plugin indent on
 
