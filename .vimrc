@@ -127,7 +127,6 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tomtom/tcomment_vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
 
 Plugin 'nvim-lua/plenary.nvim'
 " Prefer fzf, but keeping it around just incase
