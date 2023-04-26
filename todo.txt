@@ -1,5 +1,4 @@
-Fix LSP selection window not updating to selection
-Select the suggestion on autocomplete with TAB, but continue to cycle through the list
---- TODO(reece): Make the visuals of telescope bigger/wider
---- TODO(reece): Want to include hidden files in the find_file call
+Fix LSP selection window not updating to selection - Use telescope for this?
+-- TODO(reece): Make the visuals of telescope bigger/wider
+-- TODO(reece): This is eating the autocomplete for :commands (Like :PluginInstall)
 
