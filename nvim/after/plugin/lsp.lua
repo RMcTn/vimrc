@@ -24,7 +24,6 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.on_attach(function(client, bufnr) 
-	print("help")
 	local opts = {buffer = bufnr, remap = false}
 
 	--- TODO(reece): 
