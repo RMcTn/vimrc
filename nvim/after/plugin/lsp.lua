@@ -16,6 +16,8 @@ lsp.ensure_installed({
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
+	['<TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i','c'}),
+	['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i','c'}),
 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 })
 
