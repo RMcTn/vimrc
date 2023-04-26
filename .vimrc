@@ -128,6 +128,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plugin 'ThePrimeagen/harpoon'
 
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
@@ -152,7 +153,6 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plugin 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
 
 " End of LSP
-
 call vundle#end()
 filetype plugin indent on
 
