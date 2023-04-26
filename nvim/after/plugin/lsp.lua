@@ -16,9 +16,8 @@ lsp.ensure_installed({
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
-	-- TODO(reece): This is eating the autocomplete for :commands (Like :PluginInstall)
-	['<TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i','c'}),
-	['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i','c'}),
+	['<TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i'}),
+	['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i'}),
 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 })
 
