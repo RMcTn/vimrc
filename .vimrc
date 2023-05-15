@@ -156,6 +156,11 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " End of LSP
 Plugin 'ibhagwan/fzf-lua', {'branch': 'main'}
+
+" Run after install -  :call mkdp#util#install()
+" Requires node and yarn
+" :MarkdownPreview to run
+Plugin 'iamcco/markdown-preview.nvim'
 call vundle#end()
 filetype plugin indent on
 
