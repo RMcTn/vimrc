@@ -44,7 +44,7 @@ set number
 set shiftround
 
 "Change tabs to 4 spaces
-set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab 
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
 set showcmd
 set copyindent
 
