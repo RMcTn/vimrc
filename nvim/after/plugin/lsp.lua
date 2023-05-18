@@ -11,6 +11,7 @@ lsp.ensure_installed({
 	'ruby_ls',
 	'clangd',
 	'gopls',
+	'bashls',
 })
 
 local cmp = require('cmp')
