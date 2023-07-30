@@ -80,9 +80,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 
 Plugin 'machakann/vim-highlightedyank'
 
-Plugin 'vimwiki/vimwiki'
-"<leader>ww to open or <leader>wt for new tab
-
 " Plugin 'neoclide/coc.nvim'
 "coc plugin extension install
 ":CocInstall coc-rust-analyzer
