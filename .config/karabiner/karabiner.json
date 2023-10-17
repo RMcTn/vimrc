@@ -29,7 +29,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -aterminal"
+                                        "shell_command": "open -aiterm"
                                     }
                                 ],
                                 "type": "basic"

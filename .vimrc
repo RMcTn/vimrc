@@ -104,6 +104,7 @@ Plugin 'leafOfTree/vim-svelte-plugin'
 Plugin 'rust-lang/rust.vim'
 
 Plugin 'morhetz/gruvbox'
+Plugin 'catppuccin/nvim'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
@@ -188,7 +189,8 @@ let g:gutentags_enabled = 0
 nmap <F3> :TagbarToggle<CR>
 nmap <F2> :TagbarOpen fcj<CR>
 
-color gruvbox
+" color gruvbox
+colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 set background=dark
 
 "Todo-vim
