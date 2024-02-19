@@ -47,6 +47,7 @@ brew install nvm
 brew install rbenv
 brew install tmux
 brew install neovim
+brew install bluesnooze # Stops sleeping mac from connecting to bluetooth devices
 
 # Cargo installs
 echo "Installing Cargo programs"
