@@ -29,6 +29,10 @@ alias gdc="git diff --cached"
 alias gl="git log --oneline"
 alias gp="git pull"
 alias gccc="git checkout"
+# Credit https://jordanelver.co.uk/blog/2020/06/04/fixing-commits-with-git-commit-fixup-and-git-rebase-autosquash/
+alias gfixup="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+alias gfixrebase="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o -I % git rebase -i --autosquash %~1"
+alias glcopy="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | pbcopy" # TODO: pbcopy is mac, xclip is unix. Find what's installed then use that automatically
 alias glmaster="git log master..HEAD"
 alias gdmaster="git diff master...HEAD"
 alias gsearch="git log -S" # <term> Will search for something in the diff of commits
