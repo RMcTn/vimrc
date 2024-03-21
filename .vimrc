@@ -164,7 +164,7 @@ filetype plugin indent on
 
 "NERDTree
 let g:NERDTreeWinPos = 'right'
-map <F4> :NERDTreeToggle<CR>
+map <F5> :NERDTreeToggle<CR>
 
 "FZF
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
