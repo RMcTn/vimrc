@@ -33,7 +33,7 @@ alias gp="git pull"
 alias gccc="git checkout"
 # Credit https://jordanelver.co.uk/blog/2020/06/04/fixing-commits-with-git-commit-fixup-and-git-rebase-autosquash/
 alias gfixup="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | xargs -o git commit --fixup"
-alias grb="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | xargs -o -I % git rebase -i"
+alias grb="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | xargs -o -I % git rebase -i %~1"
 alias gfixrebase="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | xargs -o -I % git rebase -i --autosquash %~1"
 alias glcopy="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | pbcopy" # TODO: pbcopy is mac, xclip is unix. Find what's installed then use that automatically
 alias gshow="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -d ' ' -f1 | xargs -o git show"
