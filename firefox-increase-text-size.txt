@@ -1,0 +1,1 @@
+about:config - layout.css.devPixelsPerPx - Set to 1.0 and start tweaking (higher value is bigger text)
