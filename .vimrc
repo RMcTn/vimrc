@@ -297,4 +297,4 @@ function! Formatonsave()
   py3f /usr/share/clang/clang-format.py
   "FOR MAC: py3f /opt/homebrew/Cellar/llvm/13.0.1_1/share/clang/clang-format.py
 endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+" autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
