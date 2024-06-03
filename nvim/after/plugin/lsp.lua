@@ -1,6 +1,8 @@
 local lsp = require("lsp-zero")
 local fzf = require("fzf-lua")
 
+require('go').setup()
+
 lsp.preset("recommended")
 
 

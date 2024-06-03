@@ -96,6 +96,7 @@ Plugin 'vim-ruby/vim-ruby'
 
 "Go
 Plugin 'tweekmonster/gofmt.vim'
+Plugin 'ray-x/go.nvim'
 
 Plugin 'tpope/vim-commentary'
 
@@ -298,3 +299,9 @@ function! Formatonsave()
   "FOR MAC: py3f /opt/homebrew/Cellar/llvm/13.0.1_1/share/clang/clang-format.py
 endfunction
 " autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+
+ " For golang tmpl tree sitter support - https://github.com/ngalaiko/tree-sitter-go-template
+augroup filetypedetect
+autocmd BufNewFile,BufRead *.tmpl, if search('{{.\+}}', 'nw') | setlocal filetype=gotmpl | endif
+augroup END
