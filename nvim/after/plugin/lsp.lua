@@ -7,7 +7,7 @@ lsp.preset("recommended")
 
 
 lsp.ensure_installed({
-	'typescript-language-server',
+	'ts_ls',
 	'eslint',
 	'lua_ls',
 	'rust_analyzer',
