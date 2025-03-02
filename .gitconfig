@@ -15,6 +15,11 @@
         sort = -committerdate # Change branch sort to latest commit, rather than alphabetical
 [tag]
         sort = version:refname # Change tag sort so that 0.5.101 comes BEFOER 0.5.1000
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
