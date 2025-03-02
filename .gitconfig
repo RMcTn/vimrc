@@ -1,9 +1,22 @@
+# Some lovely config values from https://blog.gitbutler.com/how-git-core-devs-configure-git/
 [user]
-	name = Reece McTiernan
+	name = RMcTn
 	email = rmctiernan@protonmail.com
+	signingkey = 52612EC5DF8FA5E5
 [alias]
 	lg = log --oneline
 [commit]
 	verbose = true
 [core]
 	editor = nvim
+[column]
+        ui = auto # Lets the UI put things in columns, rather than 1 large list
+[branch]
+        sort = -committerdate # Change branch sort to latest commit, rather than alphabetical
+[tag]
+        sort = version:refname # Change tag sort so that 0.5.101 comes BEFOER 0.5.1000
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
