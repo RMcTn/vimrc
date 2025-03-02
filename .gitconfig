@@ -6,7 +6,7 @@
 [alias]
 	lg = log --oneline
 [commit]
-	verbose = true
+	verbose = true # Shows the diff in the commit window
 [core]
 	editor = nvim
 [column]
@@ -27,7 +27,10 @@
 	# prune = true	# If branches are deleted on the origin, they'll automatically be deleted locally on fetch. Not a fan of this, but putting it here just incase!
 	# pruneTags = true
 	all = true # Grab all changes on fetch, not just current branch
-	
+[rerere]
+	# See https://blog.gitbutler.com/git-tips-1-theres-a-git-config-for-that/#reuse-recorded-resolution for more info on replays. Useful for rebases with conflicts over and over again
+	enabled = true # Records the before and after states of rebase conflicts
+	autoupdate = true # Automatically re apply the fixes if seen again. 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
