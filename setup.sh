@@ -16,3 +16,5 @@ ln -s $PWD/.ideavimrc $HOME/.ideavimrc
 
 ln -s $PWD/.tmux.conf $HOME/.tmux.conf
 
+ln -s $PWD/.vimrc $HOME/.config/nvim/init.vim
+ln -s $PWD/.gitconfig $HOME/.gitconfig
