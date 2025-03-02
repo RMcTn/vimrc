@@ -27,6 +27,11 @@
 	# prune = true	# If branches are deleted on the origin, they'll automatically be deleted locally on fetch. Not a fan of this, but putting it here just incase!
 	# pruneTags = true
 	all = true # Grab all changes on fetch, not just current branch
+[rebase]
+	# See https://blog.gitbutler.com/git-autosquash/ for more on autosquash
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 [rerere]
 	# See https://blog.gitbutler.com/git-tips-1-theres-a-git-config-for-that/#reuse-recorded-resolution for more info on replays. Useful for rebases with conflicts over and over again
 	enabled = true # Records the before and after states of rebase conflicts
