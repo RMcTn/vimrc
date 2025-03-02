@@ -23,6 +23,10 @@
 [push]
 	autoSetupRemote = true # No need to set --set-upstream origin!
 	followTags = true # Pushes local tags that aren't on the server, on every push
+[fetch]
+	# prune = true	# If branches are deleted on the origin, they'll automatically be deleted locally on fetch. Not a fan of this, but putting it here just incase!
+	# pruneTags = true
+	all = true # Grab all changes on fetch, not just current branch
 	
 [filter "lfs"]
 	clean = git-lfs clean -- %f
