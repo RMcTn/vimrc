@@ -20,6 +20,10 @@
 	colorMoved = plain
 	mnemonicPrefix = true
 	renames = true
+[push]
+	autoSetupRemote = true # No need to set --set-upstream origin!
+	followTags = true # Pushes local tags that aren't on the server, on every push
+	
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
