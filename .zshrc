@@ -9,6 +9,12 @@ eval "$(rbenv init - zsh)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+# Let different terminals see each other's history
+# NOTE: It feels like history only 'updates' for a specific terminal after running a command itself
+setopt share_history
 
 # Assumes brew install
 export NVM_DIR="$HOME/.nvm" 
